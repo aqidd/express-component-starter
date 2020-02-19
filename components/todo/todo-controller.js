@@ -8,7 +8,7 @@ class TodoController {
         try {
             let data = await express.db.collection('todos').find().toArray()
             return res.json(data)
-        } catch (err) {
+        } catch (error) {
             console.log(error)
                 // todo use proper error code
             return res.status(500).json({
